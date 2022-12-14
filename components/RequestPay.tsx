@@ -55,7 +55,7 @@ export const RequestPay: FC = () => {
                 Accept: "application/json",
             },
         });
-        console.log("pdf uploaded!");
+        console.log("pdf uploaded");
         const data = await response.json();
         console.log(data.link);
         return `${data.link}`;
@@ -72,6 +72,7 @@ export const RequestPay: FC = () => {
             description: `${description}`,
             author: `${author}`,
             image: "https://nftstorage.link/ipfs/bafkreiexugso4wk3ugovkz5zi6nbhvr4h3zysg5pwtmmvppt4y7rpypwnq",
+            timestamp: Date.now(),
             properties: {
                 files: 
                     {
